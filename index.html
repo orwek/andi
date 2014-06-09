@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>andi 0.1 template</title>
+	<style type="text/css">
+		.row {
+			width: auto;
+			clear: both;
+			margin-top: 25px;
+		}
+		.btn {
+			background-color: #e7e7e7;
+			padding: 15px;
+			text-align: center;
+			font-size: 30px;
+			float: left;
+			margin-right: 15px;
+			border-radius: 30px;
+		}
+		#log {
+			color: red;
+			display : none;
+			margin-top : 15px;
+			padding: 15px;
+			font-size : 30px;
+			height : 100px;
+			overflow : scroll;
+			background-color : #e7e7e7;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="row">
+		<div id="log">
+		</div>
+	</div>
+	<script>
+		// andi 0.1 - mobile dev toolkit
+		// Written by Kendall Purser
+		// 2014.06.01
+
+		var get, log, css, show, hide;
+
+		// ***get function***
+		get = function (id) {
+			var temp_id = document.getElementById(id);
+			return temp_id;
+		}
+		// ***log function***
+		log = function (msg) {
+			show("log");
+			var temp = get("log").innerHTML;
+			get("log").innerHTML = temp + "<br /> " + msg;
+		} 
+		// ***css interactions***
+		css = function (id,key_val) {
+			for (i in key_val) {
+				get(id).style[i] = key_val[i];
+			}
+		};
+		show = function (id) {
+			css(id, {"display":"block"});
+		};
+		hide = function (id) {
+			css(id, {"display":"none"});
+		} ;
+	</script>
+	</body>
+</html>
