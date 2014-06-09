@@ -3,7 +3,7 @@ andi
 
 A super light framework for developing web apps on mobile devices.
 
-I started developing andi while I was on vacation. I was writing a web app on my Android phone and didn't have jQuery or other libraries or frameworks available to me, so I started writing my own. I started with a simple id selector, and error console, and it grew from there.
+I started developing andi while I was on vacation. I was writing a web app on my Android phone and didn't have jQuery or other libraries or frameworks available to me, so I started writing my own. I started with a simple id selector, and an error console, and it grew from there.
 
 JavaScript API
 ====
@@ -14,7 +14,7 @@ Executes getElementsById(), can be used to select DOM elements. Similar to jQuer
 
 log(msg)
 ----
-Acts as a console, which doesn't currently exist for mobile devices. Include a div id="log" at the bottom of your app to see logged items.
+Acts as a console, similar to "console.log();" which doesn't currently exist for mobile devices. Include a div with id="log" at the bottom of your app to see logged items.
 
 css(id,{"key":"value"})
 ----
@@ -39,7 +39,3 @@ Makes hard rows between page sections.
 .btn
 ----
 Simple button style.
-
-#log
-----
-Styles for the log div.
