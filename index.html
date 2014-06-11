@@ -36,39 +36,41 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="log">
-		</div>
+		<div id="log"></div>
 	</div>
-	<script>
-		// andi 0.1 - mobile dev toolkit
-		// Written by Kendall Purser
-		// 2014.06.01
+<script>
+	// andi 0.1 - mobile dev toolkit
+	// Written by Kendall Purser
+	// 2014.06.01
 
-		var get, log, css, show, hide;
-
-		// ***get function***
-		get = function (id) {
+	var a = {
+		get : function (id) {
 			var temp_id = document.getElementById(id);
 			return temp_id;
-		}
-		// ***log function***
-		log = function (msg) {
-			show("log");
+		},
+		log : function (msg) {
+			a.show("log");
 			var temp = get("log").innerHTML;
-			get("log").innerHTML = temp + "<br /> " + msg;
-		} 
-		// ***css interactions***
-		css = function (id,key_val) {
+			a.get("log").innerHTML = temp + "<br /> " + msg;
+		},
+		css : function (id,key_val) {
 			for (i in key_val) {
-				get(id).style[i] = key_val[i];
+				a.get(id).style[i] = key_val[i];
 			}
-		};
-		show = function (id) {
-			css(id, {"display":"block"});
-		};
-		hide = function (id) {
-			css(id, {"display":"none"});
-		} ;
-	</script>
+		},
+		show : function (id) {
+			a.css(id, {"display":"block"});
+		},
+		hide : function (id) {
+			a.css(id, {"display":"none"});
+		}
+	};
+
+	// ***catch browser errors and log them
+	window.onerror = function (msg, url, num, col, obj) {
+		a.log("ERR(" + num + ", " + col + ") " + msg + "<br />" + url + " " + obj);
+	};
+	
+</script>
 	</body>
 </html>
