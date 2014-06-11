@@ -4,9 +4,28 @@
 	<title>andi 0.1 template</title>
 	<style type="text/css">
 		.row {
-			width: auto;
+			width: 100%;
 			clear: both;
-			margin-top: 25px;
+			margin-top: 5%;
+		}
+		.cell {
+			float: left;
+		}
+		.cell25 {
+			float: left;
+			width: 25%;
+		}
+		.cell30 {
+			float: left;
+			width: 30%;
+		}
+		.cell50 {
+			float: left;
+			width: 50%;
+		}
+		.cell60 {
+			float: left;
+			width: 60%;
 		}
 		.btn {
 			background-color: #e7e7e7;
@@ -27,6 +46,14 @@
 			overflow : scroll;
 			background-color : #e7e7e7;
 		}
+		
+	@media all and (max-width: 768px)  {
+		.cell .cell25, .cell30, .cell50, .cell60 {
+			float: none;
+			width: auto;
+		}
+	}
+
 	</style>
 </head>
 <body>
@@ -47,6 +74,12 @@
 		get : function (id) {
 			var temp_id = document.getElementById(id);
 			return temp_id;
+		},
+		apnd : function (id, x) {
+			get(id).innerHTML = get(id).innerHTML + x;
+		},
+		ppnd : function (id, x) {
+			get(id).innerHTML = x + get(id).innerHTML;
 		},
 		log : function (msg) {
 			a.show("log");
@@ -72,5 +105,5 @@
 	};
 	
 </script>
-	</body>
+</body>
 </html>
