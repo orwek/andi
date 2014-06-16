@@ -3,6 +3,9 @@
 <head>
 	<title>andi 0.1 template</title>
 	<style type="text/css">
+		.center {
+			margin: auto;
+		}
 		.row {
 			width: auto;
 			clear: both;
@@ -14,7 +17,7 @@
 			text-align: center;
 			font-size: 30px;
 			float: left;
-			margin-right: 15px;
+			margin: 15px;
 			border-radius: 30px;
 		}
 		#log {
@@ -23,33 +26,45 @@
 			margin-top : 15px;
 			padding: 15px;
 			font-size : 30px;
-			height : 100px;
+			height : 150px;
 			overflow : scroll;
 			background-color : #e7e7e7;
+			border-radius: 30px;
 		}
-		.cell .cell25, .cell30, .cell50, .cell60 {
+		.cell, .cell25, .cell30, .cell50, .cell60, .cell75 {
 			float: none;
 			width: auto;
+			padding: 3%;
 		}
 	@media all and (min-width: 768px)  {
 		.cell {
 			float: left;
+			padding: 3%;
 		}
 		.cell25 {
 			float: left;
-			width: 25%;
+			width: 19%;
+			padding: 3%;
 		}
 		.cell30 {
 			float: left;
-			width: 30%;
+			width: 24%;
+			padding: 3%;
 		}
 		.cell50 {
 			float: left;
-			width: 50%;
+			width: 44%;
+			padding: 3%;
 		}
 		.cell60 {
 			float: left;
-			width: 60%;
+			width: 54%;
+			padding: 3%;
+		}
+		.cell75 {
+			float: left;
+			width: 69%;
+			padding: 3%;
 		}
 	}
 	</style>
@@ -68,6 +83,12 @@
 	// Written by Kendall Purser
 	// 2014.06.01
 
+	// ***catch browser errors and log them
+	window.onerror = function (msg, url, num, col, obj) {
+		a.log("ERR(" + num + ", " + col + ") " + msg + "<br />" + url + " " + obj);
+	};
+	
+	// ***JavaScript API***
 	var a = {
 		get : function (id) {
 			var temp_id = document.getElementById(id);
@@ -96,12 +117,6 @@
 			a.css(id, {"display":"none"});
 		}
 	};
-
-	// ***catch browser errors and log them
-	window.onerror = function (msg, url, num, col, obj) {
-		a.log("ERR(" + num + ", " + col + ") " + msg + "<br />" + url + " " + obj);
-	};
-	
 </script>
 </body>
 </html>
