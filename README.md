@@ -39,6 +39,10 @@ Hides the given id.
 CSS API
 ====
 
+.nav
+----
+Simple nav bar style.
+
 .center
 ----
 Centers page elements via margin: auto;
