@@ -90,9 +90,9 @@
 		<div id="log"></div>
 	</div>
 <script>
-	// andi 0.1 - mobile dev toolkit
+	// andi 0.2 - mobile dev toolkit
 	// Written by Kendall Purser
-	// 2014.06.01
+	// 2015.03.04
 
 	// ***catch browser errors and log them
 	window.onerror = function (msg, url, num, col, obj) {
@@ -126,6 +126,16 @@
 		},
 		hide : function (id) {
 			a.css(id, {"display":"none"});
+		},
+		// localStorage functions
+		save : function (key, value) {
+			localStorage.setItem(key) = value;
+		},
+		read : function (key) {
+			return localStorage.getItem(key);
+		},
+		clear : function (key) {
+			localStorage.removeItem(key);
 		}
 	};
 </script>

@@ -35,6 +35,17 @@ a.hide(id)
 ----
 Hides the given id.
 
+a.save(key,value)
+----
+Assigns the given value to the given key in localStorage
+
+a.read(key)
+----
+Returns the value of the given key from localStorage
+
+a.clear(key)
+----
+Removes the given key from localStorage
 
 CSS API
 ====
