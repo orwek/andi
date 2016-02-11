@@ -1,21 +1,67 @@
-.nav {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+/*
+	andi 0.2 - mobile dev toolkit
+	Written by Kendall Purser
+	2015.03.04
+	2016.02.11 (edit)
+*/
+
+/* Default styles (phone) */
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav, .footer{
+	position: relative;
 	width: auto;
-	height: 30px;
-	font-size: 28px;
+	height: 25px;
+	font-size: 20px;
 	color: #ffffff;
 	background-color: #000000;
+	padding: 5px;
 }
+
+.nav a, .footer a {
+	margin: 0px 10px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#links a:hover {
+	text-decoration: underline;
+}
+
+#links {
+	float: right;
+}
+
+.logo {
+	height: 25px;
+	float: left;
+}
+
+.footer {
+	position: relative;
+	width: auto;
+	height: 25px;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #000000;
+	padding: 5px;
+}
+
+
+/* grid styles */
 .center {
 	margin: auto;
 }
+
 .row {
 	width: auto;
 	clear: both;
 	margin-bottom: 5%;
-}		
+}
+
 .btn {
 	background-color: #e7e7e7;
 	padding: 15px;
@@ -25,6 +71,7 @@
 	margin: 15px;
 	border-radius: 30px;
 }
+
 #log {
 	color: red;
 	display : none;
@@ -36,6 +83,7 @@
 	background-color : #e7e7e7;
 	border-radius: 30px;
 }
+
 .cell, .cell25, .cell30, .cell50, .cell60, .cell75 {
 	float: none;
 	width: auto;
@@ -44,7 +92,8 @@
 
 
 /* bigger than a phone */
-@media all and (min-width: 400px)  {
+@media all and (min-width: 450px)  {
+
 	.cell {
 		float: left;
 		padding: 3%;
