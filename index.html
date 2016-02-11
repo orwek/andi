@@ -3,82 +3,7 @@
 <head>
 	<title>andi 0.1 template</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<style type="text/css">
-		.nav {
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: auto;
-			height: 30px;
-			font-size: 28px;
-			color: #ffffff;
-			background-color: #000000;
-		}
-		.center {
-			margin: auto;
-		}
-		.row {
-			width: auto;
-			clear: both;
-			margin-bottom: 5%;
-		}		
-		.btn {
-			background-color: #e7e7e7;
-			padding: 15px;
-			text-align: center;
-			font-size: 30px;
-			float: left;
-			margin: 15px;
-			border-radius: 30px;
-		}
-		#log {
-			color: red;
-			display : none;
-			margin-top : 15px;
-			padding: 15px;
-			font-size : 30px;
-			height : 150px;
-			overflow : scroll;
-			background-color : #e7e7e7;
-			border-radius: 30px;
-		}
-		.cell, .cell25, .cell30, .cell50, .cell60, .cell75 {
-			float: none;
-			width: auto;
-			padding: 3%;
-		}
-	@media all and (min-width: 400px)  {
-		.cell {
-			float: left;
-			padding: 3%;
-		}
-		.cell25 {
-			float: left;
-			width: 19%;
-			padding: 3%;
-		}
-		.cell30 {
-			float: left;
-			width: 24%;
-			padding: 3%;
-		}
-		.cell50 {
-			float: left;
-			width: 44%;
-			padding: 3%;
-		}
-		.cell60 {
-			float: left;
-			width: 54%;
-			padding: 3%;
-		}
-		.cell75 {
-			float: left;
-			width: 69%;
-			padding: 3%;
-		}
-	}
-	</style>
+	<link rel="stylesheet" href="andi.css" />
 </head>
 <body>
 	<div class="row">
@@ -89,55 +14,9 @@
 	<div class="row">
 		<div id="log"></div>
 	</div>
+<script src="andi.js"></script>
 <script>
-	// andi 0.2 - mobile dev toolkit
-	// Written by Kendall Purser
-	// 2015.03.04
 
-	// ***catch browser errors and log them
-	window.onerror = function (msg, url, num, col, obj) {
-		a.log("ERR(" + num + ", " + col + ") " + msg + "<br />" + url + " " + obj);
-	};
-	
-	// ***JavaScript API***
-	var a = {
-		get : function (id) {
-			var temp_id = document.getElementById(id);
-			return temp_id;
-		},
-		apnd : function (id, x) {
-			a.get(id).innerHTML = get(id).innerHTML + x;
-		},
-		ppnd : function (id, x) {
-			a.get(id).innerHTML = x + get(id).innerHTML;
-		},
-		log : function (msg) {
-			a.show("log");
-			var temp = get("log").innerHTML;
-			a.get("log").innerHTML = temp + "<br /> " + msg;
-		},
-		css : function (id,key_val) {
-			for (i in key_val) {
-				a.get(id).style[i] = key_val[i];
-			}
-		},
-		show : function (id) {
-			a.css(id, {"display":"block"});
-		},
-		hide : function (id) {
-			a.css(id, {"display":"none"});
-		},
-		// localStorage functions
-		save : function (key, value) {
-			localStorage.setItem(key) = value;
-		},
-		read : function (key) {
-			return localStorage.getItem(key);
-		},
-		clear : function (key) {
-			localStorage.removeItem(key);
-		}
-	};
 </script>
 </body>
 </html>

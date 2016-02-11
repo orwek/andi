@@ -1,0 +1,77 @@
+.nav {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	height: 30px;
+	font-size: 28px;
+	color: #ffffff;
+	background-color: #000000;
+}
+.center {
+	margin: auto;
+}
+.row {
+	width: auto;
+	clear: both;
+	margin-bottom: 5%;
+}		
+.btn {
+	background-color: #e7e7e7;
+	padding: 15px;
+	text-align: center;
+	font-size: 30px;
+	float: left;
+	margin: 15px;
+	border-radius: 30px;
+}
+#log {
+	color: red;
+	display : none;
+	margin-top : 15px;
+	padding: 15px;
+	font-size : 30px;
+	height : 150px;
+	overflow : scroll;
+	background-color : #e7e7e7;
+	border-radius: 30px;
+}
+.cell, .cell25, .cell30, .cell50, .cell60, .cell75 {
+	float: none;
+	width: auto;
+	padding: 3%;
+}
+
+
+/* bigger than a phone */
+@media all and (min-width: 400px)  {
+	.cell {
+		float: left;
+		padding: 3%;
+	}
+	.cell25 {
+		float: left;
+		width: 19%;
+		padding: 3%;
+	}
+	.cell30 {
+		float: left;
+		width: 24%;
+		padding: 3%;
+	}
+	.cell50 {
+		float: left;
+		width: 44%;
+		padding: 3%;
+	}
+	.cell60 {
+		float: left;
+		width: 54%;
+		padding: 3%;
+	}
+	.cell75 {
+		float: left;
+		width: 69%;
+		padding: 3%;
+	}
+}
