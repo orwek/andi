@@ -35,6 +35,7 @@
 		hide : function (id) {
 			a.css(id, {"display":"none"});
 		},
+
 		// localStorage functions
 		save : function (key, value) {
 			localStorage.setItem(key) = value;
@@ -44,5 +45,17 @@
 		},
 		clear : function (key) {
 			localStorage.removeItem(key);
+		},
+
+		// responsive navigation
+		nav_state : 0,
+		menu_toggle : function () {
+				if (a.nav_state === 0) {
+					a.show("links");
+					a.nav_state = 1;
+				} else {
+					a.hide("links");
+					a.nav_state = 0;
+				}
 		}
 	};

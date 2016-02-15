@@ -12,10 +12,18 @@
 			<img class="logo" src="logo.png" />
 			andi v0.2
 		</a>
-		<div id="links">
+		<div id="links" class="hide_phone">
+			<a onclick="a.menu_toggle();" class="show_phone" style="float:right; cursor:pointer;">
+				X
+			</a>
 			<a href="#">About Us</a>
 			<a href="#">Services</a>
 			<a href="#">Contact</a>
+		</div>
+		<div id="menu" onclick="a.menu_toggle();" class="show_phone">
+			<hr />
+			<hr />
+			<hr />
 		</div>
 	</div>
 	<!-- write web app here -->
@@ -49,9 +57,7 @@
 		<a href="https://github.com/orwek/andi" target="_blank">andi framework</a> 
 		<div style="float: right; margin-right: 10px;">Copyright &copy; 2016 Kendall Purser</div>
 	</div>
-	<div class="row">
-		<div id="log"></div>
-	</div>
+	<div id="log"></div>
 <script src="andi.js"></script>
 <script>
 
