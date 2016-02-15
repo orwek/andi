@@ -12,7 +12,6 @@ body {
 }
 
 .nav, .footer{
-	position: relative;
 	width: auto;
 	height: 25px;
 	font-size: 20px;
@@ -41,7 +40,7 @@ body {
 }
 
 .footer {
-	position: relative;
+	clear: both;
 	width: auto;
 	height: 25px;
 	font-size: 14px;
@@ -50,16 +49,22 @@ body {
 	padding: 5px;
 }
 
+hr {
+	clear:both;
+	margin: 0px 5%;
+}
+
 
 /* grid styles */
 .center {
-	margin: auto;
+	margin: 5% auto;
+	display: block;
 }
 
 .row {
 	width: auto;
 	clear: both;
-	margin-bottom: 5%;
+	margin: 3% auto;
 }
 
 .btn {
@@ -92,8 +97,12 @@ body {
 
 
 /* bigger than a phone */
-@media all and (min-width: 450px)  {
-
+@media all and (min-width: 450px) {
+	.row {
+		width: auto;
+		clear: both;
+		margin: 3% auto;
+	}
 	.cell {
 		float: left;
 		padding: 3%;
@@ -123,4 +132,11 @@ body {
 		width: 69%;
 		padding: 3%;
 	}
+}
+@media all and (min-width: 1000px)  {
+	.row {
+		width: 1000px;
+		clear: both;
+		margin: 3% auto;
+	}	
 }
