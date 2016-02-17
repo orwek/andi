@@ -148,6 +148,10 @@ hr {
 		display: block;
 	}
 
+	.row img {
+		margin-top: 10%;
+	}
+
 	.row {
 		width: auto;
 		clear: both;
@@ -188,5 +192,9 @@ hr {
 		width: 1000px;
 		clear: both;
 		margin: 3% auto;
-	}	
+	}
+
+	.row img {
+		margin-top: auto;
+	}
 }
