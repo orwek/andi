@@ -10,7 +10,7 @@ JavaScript API
 
 a.get(id)
 ----
-Executes getElementsById(), can be used to select DOM elements. Similar to jQuery's $.("#id"), but uses standard Javascript .
+Executes getElementsById(), can be used to select DOM elements. Similar to jQuery's $.("#id"), but uses standard Javascript.
 
 a.apnd(id,x)
 ----
@@ -47,12 +47,35 @@ a.clear(key)
 ----
 Removes the given key from localStorage
 
-CSS API
+a.menu_toggle
+----
+Controls the phone navigation open/close functionality
+
+Base styles
 ====
 
 .nav
 ----
 Simple nav bar style.
+
+#links
+----
+Controls the styles for the links in the nav bar.
+
+.logo
+----
+Default logo style.
+
+#menu
+----
+Controls the menu icon on the phone view.
+
+.footer
+----
+Default styles for the footer.
+
+CSS API
+====
 
 .center
 ----
@@ -64,15 +87,43 @@ Makes hard rows between page sections.
 
 .btn
 ----
-Simple button style.
+Simple button style that can be used on links <a href="" class="btn"></a>.
+
+.drop_light
+----
+Adds a light colored border to the bottom and right of an element creating "drop shadow."
+
+.drop_dark
+----
+Adds a dark colored border to the bottom and right of an element creating "drop shadow."
+
+.round
+----
+Rounds the corners of divs with a 10px radius.
+
+.circle
+----
+Makes square elements like divs and images into circles.
+
+.hide_phone
+----
+Hides the given element in phone view and makes it visible in Screen view.
+
+.show_phone
+----
+Makes the given element visible in phone view and hidden in Screen view.
+
+.right
+----
+Makes the given element float: right;
 
 .cell
 ----
-Applies the float: left; and padding: 3%; styles, leaving the width up to the user. Width changes to auto on screens smaller than 768px wide.
+Applies the float: left; and padding: 3%; styles, leaving the width up to the user. Width changes to auto on screens smaller than 450px wide.
 
 .cell25, .cell30, .cell50, .cell60, .cell75
 ----
-Same as .cell, but also applies a percentage width equal to the number indicated. (ie- .cell25 = width: 25%;)
+Used in conjuction with .cell to specify a percentage width.(ie- .cell25 = width: 25%;)
 
 .log
 ----
