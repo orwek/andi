@@ -51,28 +51,6 @@ a.menu_toggle
 ----
 Controls the phone navigation open/close functionality
 
-Base styles
-====
-
-.nav
-----
-Simple nav bar style.
-
-#links
-----
-Controls the styles for the links in the nav bar.
-
-.logo
-----
-Default logo style.
-
-#menu
-----
-Controls the menu icon on the phone view.
-
-.footer
-----
-Default styles for the footer.
 
 CSS API
 ====
